@@ -1,0 +1,101 @@
+fieldset{
+    border: 10% solid transparent;
+    border-color: #c9ac5c;
+    width: 80%;
+    background-color: #03476e;
+    border-radius: 1rem;
+    
+}
+body {
+    background-color: #03476e;
+    
+}
+
+#div-izquierda{
+    text-align: start;
+    align-items: start;
+    color: #c9ac5c;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:550;
+}
+#etiqueta{
+    text-align: center;
+    align-items: center;
+    height: 95px;
+    width:100%;
+    background-color: #03476e;
+    
+    #logo{
+        width: 250px;
+        height: 80px;
+    }
+    #a{
+        width: 30px;
+        height: 30px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+#EtiquetaInferior{
+    text-align: center;
+    align-items: center;
+    height: 85px;
+    width:100%;
+    background-color: #03476e;
+    position: absolute;
+}
+.botonpagina{
+    width: 30px;
+    height: 30px;
+}
+
+#presentacion{
+    width: 100%;
+}
+
+
+
+
+
+#titulocorto{
+    height: 50px;
+    width: 160px;
+}
+#datosinicio{
+    width: 30px;
+    height: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.img_chica {
+    height		: 200px;
+    width		: 260px;
+}
+.img_grande {
+    height		: 400px;
+    width		: 560px;
+}
+
+#ImagenError{
+    width: 220px;
+    height: 220px;
+}
+
+#redes{
+    width: 40px;
+    height: 40px;
+}
+#logito{
+    width: 60px;
+    height: 60px;
+    margin-right: 0%;
+}
+#caracteristicaspropiedad{
+    margin-left: 20%;
+    text-align: left;
+
+}

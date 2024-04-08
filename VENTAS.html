@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>OBLIGATORIO 2</title>
+        <link rel="stylesheet" href="css/Estilo.css">
+        <script src="dominio/MEMORIA.js"></script>
+        <script src="dominio/objVentas.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+    </head>
+
+    <body id="body" onload="Venta.inicio()">
+        <div class="row" id="etiqueta">
+            <div class="col-sm-4">                
+                <a href="PERSONAS.html" id="a"><img src="imagenes/graficoboton.png" alt="inicioboton" class="botonpagina"></a>
+                <a href="INICIO.html" id="a"><img src="imagenes/inicioboton.png" alt="inicioboton" class="botonpagina"></a>
+            </div>
+			<div class="col-sm-4">
+                <img src="imagenes/titulo.png" alt="logo" id="logo">    
+            </div>
+            <div class="col-sm-4">                
+                <a href="INGRESO.html" id="a"><img src="imagenes/articulosboton.png" alt="inicioboton" class="botonpagina"></a>
+                <a href="VENTAS.html" id="a"><img src="imagenes/ventasboton.png" alt="inicioboton" class="botonpagina"></a>
+            </div>
+        </div>
+        <br>
+        <center>
+        <fieldset>
+            <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <form id="abmVentas">
+                            <br>
+                            <div class="form-group">
+                                <select class="form-control" id="listaP" size="6" onclick="Venta.seleccionar()">
+                                </select>
+                            </div>
+                            <div id="div-izquierda">
+                            <div class="form-group" >
+                                <label for="idV">ID Venta </label>
+                                <input type="number" class="form-control" id="idV" min="1" disabled>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="idP">ID Propiedad</label>
+                                        <select class="form-control" id="idP" onchange="Venta.seleccionarP()"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="tipoP">Tipo de propiedad</label>
+                                        <input type="text" class="form-control" id="tipoP" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="precio">Precio</label>
+                                        <input type="number" class="form-control" id="precio" min="1" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="porcentaje">Ganancia de agente</label>
+                                        <input type="number" class="form-control" id="porcentaje" min="1" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="idAgente">ID Agente</label>
+                                        <select class="form-control" id="idAgente" placeholder="Seleccione el id de un agente"></select>
+                                    </div>
+                                
+                                
+                                    <div class="form-group">
+                                        <label for="idComprador">ID Comprador</label>
+                                        <select class="form-control" id="idComprador" placeholder="Seleccione el id de un comprador"></select>
+                                    </div>
+                                
+                                
+                                    <div class="form-group">
+                                        <label for="idPropietario">ID Propietario</label>
+                                        <select class="form-control" id="idPropietario" placeholder="Seleccione el id de un propietario"></select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5"><img src="imagenes/logo1.png" id="ImagenError"></div>
+                            </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="Venta.alta()">Alta</button>        
+                            <button type="button" class="btn btn-secondary" onclick="Venta.devolucion()">Devolver</button>
+                            <button type="button" class="btn btn-secondary" onclick="Venta.modificar()">Modificar</button>        
+                            <button type="button" class="btn btn-warning" onclick="Venta.limpiar()">Limpiar</button>
+                        </form>
+                        <br>
+                        <div class="form-group">
+                            <select class="form-control" id="lista" size="8" onclick="Venta.seleccionarV()">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+            </div>
+        </fieldset>
+    </center>
+    </body>
+</html>
